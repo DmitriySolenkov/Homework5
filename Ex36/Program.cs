@@ -11,22 +11,22 @@
 
 Console.WriteLine("Введите длину массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
-if(length>1)
+if (length > 1)
 {
-int[] array = RandomArray(length);
+    int[] array = RandomArray(length);
 
-Console.WriteLine($"[{String.Join(", ", array)}]");
+    Console.WriteLine($"[{String.Join(", ", array)}]");
 
-int sum=0;
-for (int j = 0; j < length; j++)
-{
-    if (j%2!=0)
+    int sum = 0;
+    for (int j = 0; j < length; j++)
     {
-        sum += array[j];
+        if (j % 2 != 0)
+        {
+            sum += array[j];
+        }
     }
-}
 
-Console.WriteLine($"Сумма элементов массива, стояших на нечетных позициях: {sum}");
+    Console.WriteLine($"Сумма элементов массива, стояших на нечетных позициях: {sum}");
 }
 else
 {

@@ -11,6 +11,8 @@
 
 Console.WriteLine("Введите длину массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
+if (length > 0)
+{
 int[] array = RandomArray(length);
 
 Console.WriteLine($"[{String.Join(", ", array)}]");
@@ -23,3 +25,8 @@ for (int j = 0; j < length; j++)
     }
 }
 Console.WriteLine($"Четных чисел в массиве: {count}");
+}
+else
+{
+    Console.WriteLine("Некорректная длина массива!");
+}
