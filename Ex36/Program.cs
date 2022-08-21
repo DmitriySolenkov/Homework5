@@ -11,6 +11,8 @@
 
 Console.WriteLine("Введите длину массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
+if(length>1)
+{
 int[] array = RandomArray(length);
 
 Console.WriteLine($"[{String.Join(", ", array)}]");
@@ -25,3 +27,8 @@ for (int j = 0; j < length; j++)
 }
 
 Console.WriteLine($"Сумма элементов массива, стояших на нечетных позициях: {sum}");
+}
+else
+{
+    Console.WriteLine("Некорректная длина массива!");
+}
